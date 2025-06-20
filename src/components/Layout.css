@@ -1,0 +1,134 @@
+/* Asegura que el html y body ocupen el 100% de la altura y del ancho */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura que el body ocupe el 100% del ancho */
+  }
+  
+  /* Layout que se ajusta al 100% de la pantalla */
+  .layout {
+    display: flex;
+    height: 100vh; /* Se asegura de que ocupe toda la altura del viewport */
+    width: 100%; /* Se asegura de que ocupe todo el ancho de la pantalla */
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Sidebar ajustado y se asegura que ocupe el 100% de la altura y un ancho fijo */
+  .sidebar {
+    width: 250px; /* Ancho fijo para el sidebar */
+    background-color: #ff6666;
+    color: black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Asegura que el contenido se alinee al principio */
+    height: 100vh; /* Asegura que el sidebar ocupe toda la altura de la pantalla */
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fija el sidebar */
+    top: 0; /* Asegura que el sidebar quede en la parte superior */
+    left: 0; /* Asegura que el sidebar quede en el borde izquierdo */
+    z-index: 100; /* Asegura que el sidebar esté por encima del contenido */
+  }
+  
+  /* Sidebar title */
+  .sidebar-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #edf2f7;
+    text-align: center;
+  }
+  
+  /* Menú del Sidebar */
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem; /* Añadir espacio entre los items */
+  }
+  
+  /* Item del sidebar */
+  .sidebar-item {
+    color: #cbd5e0;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* Hover effect */
+  .sidebar-item:hover {
+    background-color: #4a5568;
+    color: white;
+  }
+  
+  /* Active item */
+  .sidebar-item.active {
+    background-color: #e53e3e;
+    color: white;
+  }
+  
+  /* Main content que ocupa el resto del espacio disponible */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f9fafb;
+    padding-left: 270px; /* Deja espacio para el sidebar fijo */
+    width: calc(100% - 250px); /* Resta el ancho del sidebar */
+    overflow-x: hidden; /* Evita que se desborde horizontalmente */
+  }
+  
+  /* Header con la parte superior de la pantalla */
+  .header {
+    background-color: #fff;
+    padding: 1.2rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 90; /* Asegura que el header esté por encima del contenido */
+  }
+  
+  /* Título del Header */
+  .header-title {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #111827;
+  }
+  
+  /* Alineación del logout en el header */
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  /* Botón de logout */
+  .logout-btn {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for the logout button */
+  .logout-btn:hover {
+    background-color: #c53030;
+  }
+  
+  /* Página de contenido central ajustada para que ocupe el espacio completo */
+  .page-content {
+    padding: 2rem;
+    overflow-y: auto;
+    flex: 1;
+    background-color: #f7fafc;
+    height: calc(100vh - 64px); /* Ajusta el contenido debajo del header */
+  }
+  
